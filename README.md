@@ -1,14 +1,13 @@
 # Vue Google Autocomplete
 
-A Vue.js (2.x) autosuggest component for the Google Maps Places API.
+This is a fork of Vue.js (2.x) autosuggest component for the Google Maps Places API rebuild for Vuetify. It uses v-text-input component instead of html input tag.
 
-## Demo
-
-Live demo: [olefirenko.github.io/vue-google-autocomplete](https://olefirenko.github.io/vue-google-autocomplete/)
+Original source: [olefirenko.github.io/vue-google-autocomplete](https://olefirenko.github.io/vue-google-autocomplete/)
 
 ## Benefits
+I have tried to change css styles of vue-google-autocomplete component represented by author. But I found out making a fork instead.
 
-I have tried to use different Vue Google Autocomplete components, but did not find any that would solve my needs. So below I would like to mention what you can get from this exact component:
+All original features are just the same:
 
 * Load more than one autocompletion inputs (I could not achieve this with existing vue components)
 * Getting geolocation data (latitude, longitude) for found address object along with other address data (country, city, state, county, street, house number, zip code). So no need to do additional geocode request on backend side.
@@ -33,7 +32,7 @@ This component uses Google Maps Places API to get geo suggests for autocompletio
 </html>
 ```
 
-To obtain API key please visit the [Google Developer Console](https://console.developers.google.com). The API's that you have to enable in your Google API Manager Dashboard are [Google Maps Geocoding API](https://developers.google.com/maps/documentation/geocoding/start), [Google Places API Web Service](https://developers.google.com/places/web-service/) and [Google Maps Javascript API](https://developers.google.com/maps/documentation/javascript/).
+To obtain API key please visit the [Google Developer Console](https://console.developers.google.com). The API's that you have to enable in your Google API Manager Dashboard are [Google Maps Geocoding API](https://developers.google.com/maps/documentation/geocoding/start), [Google Places API Web Service](https://developers.google.com/places/web-service/) and [Google Maps Javascript API] (https://developers.google.com/maps/documentation/javascript/).
 
 The easiest way to use Vue Google Autocomplete is to install it from **npm** or **yarn**.
 
@@ -90,8 +89,6 @@ Type: `String`
 Default: `address`
 
 Types supported in place autocomplete requests. [More info](https://developers.google.com/places/supported_types#table3)
-
-You may find [this example](#correct-usage-of-the-types-parameter) helpful.
 
 #### country
 Type: `String`|`Array`
@@ -229,21 +226,4 @@ Please note that you need to provide what method will listen (`v-on:placechanged
         }
     }
 </script>
-```
-
-#### Correct usage of the types parameter
-
-The example below shows the correct usage of the `types` parameter, when limiting the search to cities:
-
-```vue
-<vue-google-autocomplete
-    id="map2"
-    ref="toAddress"
-    classname="form-control"
-    placeholder="Start typing"
-    v-on:placechanged="getToData"
-    types="(cities)"
-    country="us"
->
-</vue-google-autocomplete>
 ```
