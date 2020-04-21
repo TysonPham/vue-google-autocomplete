@@ -37,13 +37,13 @@ To obtain API key please visit the [Google Developer Console](https://console.de
 The easiest way to use Vue Google Autocomplete is to install it from **npm** or **yarn**.
 
 ```sh
-npm install vue-google-autocomplete --save
+npm install vuetify-vue-google-autocomplete --save
 ```
 
 Or
 
 ```sh
-yarn add vue-google-autocomplete
+yarn add vuetify-vue-google-autocomplete
 ```
 
 ## Usage
