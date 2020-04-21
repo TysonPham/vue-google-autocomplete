@@ -57,13 +57,13 @@ import VueGoogleAutocomplete from 'vue-google-autocomplete'
 
 In your template you can use this syntax:
 ```html
-<vue-google-autocomplete
+<vuetify-vue-google-autocomplete
     id="map"
     classname="form-control"
     placeholder="Start typing"
     v-on:placechanged="getAddressData"
 >
-</vue-google-autocomplete>
+</vuetify-vue-google-autocomplete>
 ```
 
 ### Properties
