@@ -1,5 +1,7 @@
 <template>
     <v-text-field
+            outlined
+            label="Address"
             dense
             ref="autocomplete"
             type="text"
